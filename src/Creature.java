@@ -22,7 +22,7 @@ public class Creature {
         if(happiness > 15){
             happiness = 15;
         }
-      System.out.println("Yaay, that was really interestaing");
+      System.out.println("Yaay, that was really interesting");
     }
     public void sleep(){
         if(energy > 11)
@@ -51,15 +51,20 @@ public class Creature {
     }
     public String status(){
      String status = null;
+        if(happiness <1 || energy < 1 || fullness < 1 ){
+            System.out.println("You killed " + this.name + " you are a horrible parent");
+            System.exit(0);
+        }
         if(happiness <= 6){
-          status = "\n" + this.getName() + ": I am so sad, please play with me";
+          status += "\n" + this.getName() + ": I am so sad, please play with me";
         }
         if(energy <= 6){
-          status = "\n" + this.getName() + ": I am so tired, please put me to sleep";
+          status += "\n" + this.getName() + ": I am so tired, please put me to sleep";
         }
         if(fullness<= 6){
-            status =  "\n" + this.getName() + ": I am so tired, please put me to sleep";
+            status +=  "\n" + this.getName() + ": I am so tired, please put me to sleep";
         }
+
         return status;
     }
 }

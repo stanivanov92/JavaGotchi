@@ -50,19 +50,19 @@ public class Creature {
         }
     }
     public String status(){
-     String status = null;
+     String status = "";
         if(happiness <1 || energy < 1 || fullness < 1 ){
             System.out.println("You killed " + this.name + " you are a horrible parent");
             System.exit(0);
         }
         if(happiness <= 6){
-          status += "\n" + this.getName() + ": I am so sad, please play with me";
+          status += this.getName() + ": I am so sad, please play with me\n";
         }
         if(energy <= 6){
-          status += "\n" + this.getName() + ": I am so tired, please put me to sleep";
+          status += this.getName() + ": I am so tired, please put me to sleep\n";
         }
         if(fullness<= 6){
-            status +=  "\n" + this.getName() + ": I am so tired, please put me to sleep";
+            status += this.getName() + ": I am so tired, please put me to sleep";
         }
 
         return status;

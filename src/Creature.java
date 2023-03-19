@@ -1,9 +1,9 @@
 /**
- * Created by k1764425 on 30/10/17.
+ * Created by Stanislav Ivanov
  */
 public class Creature {
- int energy, fullness, happiness;
- String name;
+ private int energy, fullness, happiness;
+ private String name;
  public Creature(String name){
      energy = 15;
      fullness = 15;
@@ -26,8 +26,9 @@ public class Creature {
     }
     public void sleep(){
         if(energy > 11)
-            System.out.println(name + " is not that tired");
+            System.out.println(this.name + " is not that tired");
         else {
+            System.out.println(this.name + "had a fantastic nap");
             energy += 8;
             fullness -= 5;
             happiness -= 5;
@@ -41,6 +42,7 @@ public class Creature {
         if(fullness > 11)
          System.out.println(name + " is already full");
         else {
+            System.out.println("Yummy, that was so tasty");
             fullness += 8;
             energy -= 4;
             happiness -= 6;
@@ -49,7 +51,7 @@ public class Creature {
             fullness = 15;
         }
     }
-    public String status(){
+    public String getStatus(){
      String status = "";
         if(happiness <1 || energy < 1 || fullness < 1 ){
             System.out.println("You killed " + this.name + " you are a horrible parent");
@@ -62,7 +64,7 @@ public class Creature {
           status += this.getName() + ": I am so tired, please put me to sleep\n";
         }
         if(fullness<= 6){
-            status += this.getName() + ": I am so tired, please put me to sleep";
+            status += this.getName() + ": I am so hungry, please feed me";
         }
 
         return status;

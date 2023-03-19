@@ -1,16 +1,16 @@
 /**
- * Created by k1764425 on 30/10/17.
+ * Created by Stanislav Ivanov
  */
 import java.util.Scanner;
 public class Game {
     private Creature creature;
     private boolean userQuits = false;
-    Scanner input = new Scanner(System.in);
+    private Scanner input = new Scanner(System.in);
     public void run(){
         startTutorial();
         while(!userQuits){
             interact();
-            System.out.println(this.creature.status());
+            System.out.println(this.creature.getStatus());
         }
         System.out.println("Time to put the creature to sleep");
     }
@@ -28,7 +28,7 @@ public class Game {
      System.out.println("2. Sleep");
      System.out.println("3. Eat");
      System.out.println("4. Quit");
-    int choice = input.nextInt();
+     int choice = input.nextInt();
        switch (choice){
            case 1:
                this.creature.play();

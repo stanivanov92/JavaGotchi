@@ -1,5 +1,5 @@
 /**
- * Created by k1764425 on 30/10/17.
+ * Created by Stanislav Ivanov
  */
 public class Main {
  private static Game game = new Game();

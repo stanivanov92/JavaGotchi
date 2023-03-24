@@ -13,7 +13,7 @@ public class Creature {
 
    }
  public String getName(){
-   return name;
+   return this.name;
  }
     public void play(){
         happiness += 8;

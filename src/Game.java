@@ -4,11 +4,11 @@
 import java.util.Scanner;
 public class Game {
     private Creature creature;
-    private boolean userQuits = false;
+    private boolean carryOn = true;
     private Scanner input = new Scanner(System.in);
     public void run(){
         startTutorial();
-        while(!userQuits){
+        while(carryOn){
             interact();
             System.out.println(this.creature.getStatus());
         }
@@ -27,7 +27,7 @@ public class Game {
      System.out.println("1. Play");
      System.out.println("2. Sleep");
      System.out.println("3. Eat");
-     System.out.println("4. Quit");
+     System.out.println("5. Quit");
      int choice = input.nextInt();
        switch (choice){
            case 1:
@@ -40,10 +40,13 @@ public class Game {
                this.creature.eat();
                break;
            case 4:
-               userQuits = true;
+               carryOn = false;
+               break;
+           case 5:
+               //Implement it here
                break;
            default:
-               System.out.println("You have to pick a number between 1 and 4");
+               System.out.println("You have to pick a number between 1 and 5");
                break;
        }
    }

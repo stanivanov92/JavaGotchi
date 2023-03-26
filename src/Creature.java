@@ -4,6 +4,9 @@
 public class Creature {
  private int energy, fullness, happiness;
  private String name;
+
+ private Creature friend;
+
  public Creature(String name){
      energy = 15;
      fullness = 15;
@@ -68,5 +71,13 @@ public class Creature {
         }
 
         return status;
+    }
+
+    public Creature getFriend() {
+        return friend;
+    }
+
+    public void setFriend(Creature friend) {
+        this.friend = friend;
     }
 }

@@ -27,7 +27,7 @@ public class Game {
      System.out.println("1. Play");
      System.out.println("2. Sleep");
      System.out.println("3. Eat");
-     System.out.println("5. Quit");
+     System.out.println("4. Quit");
      int choice = input.nextInt();
        switch (choice){
            case 1:
